@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import CartButton from "../buttons/CartButton";
 
 const FoodCard = ({ food }) => {
   return (
@@ -15,12 +16,7 @@ const FoodCard = ({ food }) => {
         <p className="mt-2 text-xl font-bold text-green-600">৳ {food.price}</p>
 
         <div className="mt-4 flex gap-2">
-          <button
-          
-            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
-          >
-            Add to Cart
-          </button>
+         <CartButton></CartButton>
           <Link href={`/foods/${food.id}`}
            
             className="flex-1 bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300 transition-colors"

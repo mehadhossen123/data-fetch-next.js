@@ -1,5 +1,5 @@
 import React from 'react';
-import FoodCardSkeleton from '../Component/FoodCardSkeleton';
+import FoodCardSkeleton from '../Component/Skeliton/FoodCardSkeleton';
 
 const loading = () => {
     return <div className="gap-5 my-5 grid lg:grid-cols-3 grid-cols-1">

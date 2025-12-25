@@ -15,10 +15,14 @@ const getFood=async(search)=>{
     return data.foods;
    
 }
+export const metadata = {
+  title: "All foods ",
+  description: "This is the best Fast food  stall",
+};
 
 const FoodPage = async({searchParams}) => {
   const {search=''}=await searchParams;
-  console.log(search)
+  
  
     const foods=await getFood(search)
 

@@ -6,11 +6,20 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "www.themealdb.com",
-      
+
         pathname: "/images/media/**",
         search: "",
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/foods-details/:id",
+        destination: "/foods/:id",
+        permanent: true,
+      },
+    ];
   },
 };
 

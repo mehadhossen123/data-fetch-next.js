@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.className} antialiased`}
       >
-        <header className="px-5 py-2 flex  justify-between bg-stone-800 items-center ">
+        <header className="px-5 py-2 flex  sticky justify-between bg-stone-800 items-center ">
           <Link href={"/"}>
             {" "}
             <img className=" w-[120px] " src="/logo.png" alt="" />

@@ -9,12 +9,12 @@ const FeedbackForm = () => {
         e.preventDefault()
         const message=e.target.message.value;
        
-        const res = await fetch("http://localhost:3000/api/feedback",{
-            method:"POST",
-            headers:{
-                'Content-Type':"application/json"
-            },
-            body:JSON.stringify({message})
+        const res = await fetch(`${process.env.NEXT_PUBLIC_server}/api/feedback`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message }),
         });
         const data=await res.json()
         if(data.insertedId){
